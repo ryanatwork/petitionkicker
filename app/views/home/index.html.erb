@@ -27,6 +27,8 @@
         <br/>
         Signature count: <%= number_with_delimiter(petition.signature_count) %>
         <br/>
+        Time left: <%= distance_of_time_in_words(DateTime.now, petition.deadline) %>
+        <br/>
       <% end %>
     </div>
     </li>
