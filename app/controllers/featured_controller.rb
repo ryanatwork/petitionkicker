@@ -1,5 +1,5 @@
 class FeaturedController < ApplicationController
   def index
-    @featured = WeThePeople::Resources::Petition.find(Featured.first.wtp_id)
+    @featured = Featured.all
   end
 end
