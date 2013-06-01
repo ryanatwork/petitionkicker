@@ -5,6 +5,8 @@ module ApplicationHelper
       "progress-danger"
     elsif percentage.to_i > 10 && percentage.to_i < 40
       "progress-warning"
+    elsif percentage.to_i > 100
+      "progress-success"
     else
       "progress-info"
     end
