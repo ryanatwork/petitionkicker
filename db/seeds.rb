@@ -6,5 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 if Rails.env.development?
+  Featured.create(wtp_id: '50a3fd762f2c88cd65000015')
   Featured.create(wtp_id: '51a27d8b8cce3f9931000002')
 end
