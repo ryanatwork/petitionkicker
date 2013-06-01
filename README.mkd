@@ -1,0 +1,33 @@
+# Petition Kicker
+
+## About
+Pulls the petitions from the We The People API and shows the ones that are closest to the threshold.
+
+## Demo
+You can see a running version of the application at
+[http://petitionkicker.herokuapp.com/][demo].
+
+[demo]: http://petitionkicker.herokuapp.com/
+
+
+## Requirements
+* Make sure the machine that you're using has Ruby 1.9.3 isntalled.  We recommend using [rbenv](https://github.com/sstephenson/rbenv/) for Ruby version management.
+* The latest version of "bundler" installed which can be installed by running `$ gem install bundler`
+
+## Installation
+    git clone git://github.com/ryanatwork/petitionkicker.git
+    cd petitionkicker
+    bundle install
+    rake db:migrate
+
+    rake db:seed #seeds the database
+
+## Usage
+    rails server
+
+
+## Copyright
+Copyright (c) 2013 Ryan Resella See [LICENSE][] for details.
+
+[license]: https://github.com/ryanatwork/petitionkicker/blob/master/LICENSE.mkd
+
