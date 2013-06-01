@@ -1,3 +1,16 @@
+<div class="span12" id="featured">
+  <div class="span6" id="featured-text">
+    <h2>Featured Petition</h2>
+    <h3><%= @featured.title %></h3>
+    <%= link_to 'Learn more', petitions_path(@featured.id), class: "btn btn-success" %>
+  </div>
+  <div class="span6">
+    <%= image_tag('driving.jpg') %>
+  </div>
+  <br/>
+</div>
+<div class="container-fluid">
+<h2>Petitions Close to Threshold</h2>
 <% @top_9.in_groups_of(3, false) do |petitions| %>
   <ul class="thumbnails">
     <% petitions.each do |petition| %>
@@ -19,3 +32,4 @@
     </li>
   </ul>
 <% end %>
+</div>
