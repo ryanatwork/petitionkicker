@@ -2,7 +2,7 @@
   <div class="span6" id="featured-text">
     <h2>Featured Petition</h2>
     <h3><%= @featured.title %></h3>
-    <%= link_to 'Learn more', petitions_path(@featured.id), class: "btn btn-success" %>
+    <%= link_to 'Learn more', petition_path(@featured.id), class: "btn btn-success" %>
   </div>
   <div class="span6">
     <%= image_tag('DEATH-STAR_510x510.jpg') %>
