@@ -19,8 +19,8 @@
         <%= link_to petition.title, petitions_path(petition.id) %>
         <br/>
         <br/>
-        <div class="progress progress-info">
-          <% percentage =  number_to_percentage((petition.signature_count.to_f / petition.signature_threshold) * 100) %>
+        <% percentage =  number_to_percentage((petition.signature_count.to_f / petition.signature_threshold) * 100) %>
+        <div class="progress <%= progress_percentage(percentage) %>">
           <div class="bar" style="width: <%="#{percentage}" %>"></div>
         </div>
         Signatures needed: <%= number_with_delimiter(petition.signatures_needed)  %>
