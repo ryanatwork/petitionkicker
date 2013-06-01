@@ -8,6 +8,6 @@ class HomeController < ApplicationController
 
     sorted_petitions = pending_petitions.sort_by{|petition| petition.signatures_needed }
 
-    @top_10 = sorted_petitions.take(10)
+    @top_9 = sorted_petitions.take(9)
   end
 end

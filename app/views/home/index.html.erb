@@ -1,6 +1,21 @@
-<h1> Petitions </h1>
-<% @top_10.each do |petition| %>
-  <%= link_to petition.title, petitions_path(petition.id) %>
-  <%= "#{ petition.title } (needs #{ petition.signatures_needed })" %><br/>
+<% @top_9.in_groups_of(3, false) do |petitions| %>
+  <ul class="thumbnails">
+    <% petitions.each do |petition| %>
+      <li class="span4">
+      <div class="thumbnail">
+        <%= link_to petition.title, petitions_path(petition.id) %>
+        <br/>
+        <br/>
+        <div class="progress progress-info">
+          <% percentage =  number_to_percentage((petition.signature_count.to_f / petition.signature_threshold) * 100) %>
+          <div class="bar" style="width: <%="#{percentage}" %>"></div>
+        </div>
+        Signatures needed: <%= number_with_delimiter(petition.signatures_needed)  %>
+        <br/>
+        Signature count: <%= number_with_delimiter(petition.signature_count) %>
+        <br/>
+      <% end %>
+    </div>
+    </li>
+  </ul>
 <% end %>
-
