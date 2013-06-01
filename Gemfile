@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'we_the_people', '~> 0.0.6'
 gem 'dalli'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem "high_voltage"
 
 # Gems used only for assets and not required
 # in production environments by default.

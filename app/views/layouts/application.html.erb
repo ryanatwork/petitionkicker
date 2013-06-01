@@ -17,6 +17,7 @@
   </head>
   <body>
 
+    <div id="wrap">
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -28,8 +29,8 @@
           <%= link_to 'Petition Kicker', root_path, class: "brand" %>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Featured", featured_index_path  %></li>
-              <li><%= link_to "About", "/path3"  %></li>
+              <li><%= link_to "Featured", featured_path  %></li>
+              <li><%= link_to "About", page_path("about")  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -40,10 +41,12 @@
         <%= bootstrap_flash %>
         <%= yield %>
       </div><!--/row-->
-
+  </div>
+  <div id="footer">
       <footer>
-        <p>National Day of Civic Hacking!</p>
+        <p>June 1, 2013 - National Day of Civic Hacking!</p>
       </footer>
+    </div>
 
 
     <!-- Javascripts
