@@ -10,28 +10,5 @@
   <br/>
 </div>
 <div class="container-fluid">
-<h2>Petitions Close to Threshold</h2>
-<% @top_9.in_groups_of(3, false) do |petitions| %>
-  <ul class="thumbnails">
-    <% petitions.each do |petition| %>
-      <li class="span4">
-      <div class="thumbnail">
-        <%= link_to petition.title, petitions_path(petition.id) %>
-        <br/>
-        <br/>
-        <% percentage =  number_to_percentage((petition.signature_count.to_f / petition.signature_threshold) * 100) %>
-        <div class="progress <%= progress_percentage(percentage) %>">
-          <div class="bar" style="width: <%="#{percentage}" %>"></div>
-        </div>
-        Signatures needed: <%= number_with_delimiter(petition.signatures_needed)  %>
-        <br/>
-        Signature count: <%= number_with_delimiter(petition.signature_count) %>
-        <br/>
-        Time left: <%= distance_of_time_in_words(DateTime.now, petition.deadline) %>
-        <br/>
-      <% end %>
-    </div>
-    </li>
-  </ul>
-<% end %>
+  <%= render :partial => "shared/petitions" %>
 </div>
