@@ -40,7 +40,9 @@ Weareclose::Application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production
-  config.cache_store = :dalli_store
+  config.cache_store = :dalli_store, ENV["MEMCACHIER_SERVERS"].split(","),
+                        {:username => ENV["MEMCACHIER_USERNAME"],
+                         :password => ENV["MEMCACHIER_PASSWORD"]}
 
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
