@@ -5,7 +5,7 @@
       <ul>
         <% @featured.each do |f| %>
           <% featured = WeThePeople::Resources::Petition.find(f.wtp_id) %>
-        <li><%= link_to featured.title, petitions_path(f.wtp_id) %></li>
+        <li><%= link_to featured.title, petition_path(f.wtp_id) %></li>
         <% end %>
       </ul>
     </div>
